@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden ;
+    margin: 0;
+}
+
+.bg {
+    background: url('https://4.bp.blogspot.com/-uwSlczkhepw/XMmyWB42tLI/AAAAAAAACGI/QQU-_q3fCeECeLIl4KS4vPx9Dl5NOts2wCKgBGAs/w0/doctor-strange-uhdpaper.com-4K-211.jpg') no-repeat center center/cover ;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.loading-text {
+    color: white;
+    font-size: 50px;
+}
