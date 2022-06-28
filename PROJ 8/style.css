@@ -1,0 +1,109 @@
+/*@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,300&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --back: #AF4D98;
+    --one : #D66BA0; 
+    --two : #E5A9A9;
+    --three : #F4E4BA;
+    --Mint : #9DF7E5;
+}
+* {
+    box-sizing: border-box ;
+}
+
+body {
+    background-color: var(--back);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden ;
+    margin: 0;
+    color: var(--one);
+}
+
+.container {
+    background-color: var(--three);
+    
+    padding: 20px  40px;
+    border-radius: 30px;
+}
+
+.container h1 {
+    
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--back);
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0px 30px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--one);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--one);
+}
+
+.form-control input:focus ,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: var(--back) ;
+}
+
+.btn {
+    background-color: var(--back);
+    border: none;
+    padding: 2px 50px;
+    border-radius: 30px;
+    color: var(--three) ;
+    margin: 25px 0;
+    
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+}
+
+.btn:active {
+    transform: scale(0.98);
+} 
+
+.btn:hover {
+    background-color: var(--Mint);
+    color: var(--back);
+}
+
+label {
+    position: absolute;
+    top: 15px;
+}
+
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: transform .3s cubic-bezier(0.68,-0.55,0.26,1.55);
+     
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: var(--back);
+    transform: translateY(-100%);
+}
