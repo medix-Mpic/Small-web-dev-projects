@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --overlay : rgba(35, 48, 101, 0.7);
+    --overlay2 : rgba(96, 112, 200, 0.7) ;
+    --btn : #C3F3C0;
+    --hoverleft : rgba(35, 48, 101);
+    --hoverright : rgba(96, 112, 200) ; 
+    --hoverWidth : 75% ;
+    --otherWidth : 25% ;
+    --speed : 1000ms ;
+}
+
+* {
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden ;
+    margin: 0;
+}
+
+.split.left .btn:hover {
+background-color: var(--hoverleft);
+border: none; 
+}
+
+.split.right .btn:hover {
+    background-color: var(--hoverright);
+    border: none; 
+    }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url('urban.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right {
+    right: 0;
+    background: url('fantasy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay) ;
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay2) ;
+}
+
+.split h1 {
+    color: var(--btn);
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    color: var(--btn);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    border: 2px solid var(--btn)  ;
+    padding: 15px 65px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.split.right , .split.left , .split.left::before , .split.right::before {
+    transition: all var(--speed) ease-in-out;
+}
+
+
+.hoverLeft .left {
+    width: var(--hoverWidth) ;
+}
+
+
+.hoverLeft .right {
+    width: var(--otherWidth) ;
+}
+
+.hoverRight .right {
+    width: var(--hoverWidth) ;
+}
+
+
+.hoverRight .left{
+    width: var(--otherWidth) ;
+}
